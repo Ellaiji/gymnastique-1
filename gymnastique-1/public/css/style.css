@@ -198,10 +198,10 @@ main > section {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 4% 6% ;
+  padding: 4% 6%;
   cursor: pointer;
   border-radius: 5px;
-  margin-left: 38%;
+  margin-top: 10em;
 }
 #second-slide .close:hover,
 #second-slide .close:focus {
