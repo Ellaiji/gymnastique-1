@@ -178,21 +178,13 @@ main > section {
   font-size: 0.35em;
   word-wrap: break-word;
   max-width: 100%;
-  line-height: 1em;
+  line-height: 1.2em;
   text-align: justify;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
   position: relative;
 }
 
-#second-slide .close {
-  color: #000000;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 28px;
-  font-weight: bold;
-}
 
 #second-slide .Retour {
   background-color: #007bff;
@@ -201,7 +193,7 @@ main > section {
   padding: 4% 6%;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 10em;
+  margin-top: 2em;
 }
 #second-slide .close:hover,
 #second-slide .close:focus {

@@ -40,6 +40,7 @@ const initSlide2 = async function () {
     setTimeout(function () {
       popup.style.display = "none";
     }, 300);
+  });
 
     document.addEventListener('click', function clickOutsidePopUp(event) {
       var popup = document.getElementById("popup");
@@ -50,6 +51,6 @@ const initSlide2 = async function () {
         }, 300);
       }
     });
-  });
+
 
 };
