@@ -150,31 +150,27 @@ main > section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   text-align: center;
 }
 
 #second-slide .popup-content h2 {
-
   font-family: "Roboto";
   font-size: 1em;
   word-wrap: break-word;
   max-width: 100%;
   line-height: 1em;
-  position: absolute;
+  position: relative;
   text-align: left;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-bottom: 2;
+  top: 0;
+  left: -1em;
+  margin-bottom: 0.45em;
 }
 #second-slide .popup-content img {
-  position :absolute
-  left=-1;
+  position: absolute;
   width: 20%;
-  
-
-
+  right: 0;
+  top: 0;
 }
 
 #second-slide .popup-content p {
@@ -186,6 +182,7 @@ main > section {
   text-align: justify;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  position: relative;
 }
 
 #second-slide .close {
