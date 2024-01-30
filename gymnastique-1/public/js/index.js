@@ -37,5 +37,5 @@ setTimeout(() => {
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
+ // initSlide1();
 }, 1000);

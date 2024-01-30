@@ -23,7 +23,16 @@ const initSlide2 = async function () {
     setTimeout(function () {
       popup.classList.add("show");
     }, 20);
+
   });
+  let response = await fetch('api/topic');
+  const data1 = await response.json();
+  response = await fetch('data/obj.json');
+  const data2 = await response.json();
+  const title = document.querySelector("#title-obj");
+  const text = document.querySelector("#text-obj");
+  title.textContent = `${data2.title}`;
+  text.textContent = `${data2.text}`;
 
   document.querySelector(".close").addEventListener("click", function () {
     var popup = document.getElementById("popup");
@@ -33,11 +42,6 @@ const initSlide2 = async function () {
     }, 300);
   });
 
-  // Retrieve the partner's topic from our API
-  let response = await fetch("api/topic");
-  const data1 = await response.json();
 
-  // Get some dummy data
-  response = await fetch("data/dummy.json");
-  const data2 = await response.json();
+
 };

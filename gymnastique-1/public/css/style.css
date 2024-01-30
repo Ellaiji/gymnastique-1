@@ -136,11 +136,11 @@ main > section {
 }
 
 #second-slide .popup-content p {
-  font-size: 0.5em;
-  line-height: 0.5em;
+  font-family: "Roboto";
+  font-size: 0.3em;
   word-wrap: break-word;
   max-width: 100%;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 #second-slide .close {
