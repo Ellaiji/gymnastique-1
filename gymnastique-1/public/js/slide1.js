@@ -40,8 +40,16 @@ const initSlide2 = async function () {
     setTimeout(function () {
       popup.style.display = "none";
     }, 300);
+
+    document.addEventListener('click', function clickOutsidePopUp(event) {
+      var popup = document.getElementById("popup");
+      if (  (!popup.contains(event.target)) && (popup.classList.contains("show"))   ) {
+        popup.classList.remove("show");
+        setTimeout(function () {
+          popup.style.display = "none";
+        }, 300);
+      }
+    });
   });
-
-
 
 };
