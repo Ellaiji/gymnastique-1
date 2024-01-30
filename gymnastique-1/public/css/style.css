@@ -152,6 +152,15 @@ main > section {
   font-weight: bold;
 }
 
+#second-slide .Retour {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 4% 6% ;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 38%;
+}
 #second-slide .close:hover,
 #second-slide .close:focus {
   color: black;
