@@ -34,7 +34,7 @@ const initSlide2 = async function () {
   title.textContent = `${data2.title}`;
   text.textContent = `${data2.text}`;
 
-  document.querySelector(".close").addEventListener("click", function () {
+  document.querySelector("#close").addEventListener("click", function () {
     var popup = document.getElementById("popup");
     popup.classList.remove("show");
     setTimeout(function () {
