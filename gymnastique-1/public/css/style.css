@@ -101,7 +101,7 @@ main > section {
 }
 
 
-.button {
+#second-slide .popup-content .close {
   --hue: var(--hue-neutral);
   border: 1px solid hsl(var(--hue), 100%, 30%);
   background-color: hsl(var(--hue), 100%, 50%);
@@ -111,11 +111,11 @@ main > section {
   outline: none;
 }
 
-.button:hover {
+#second-slide .popup-content.close:hover {
   border-color: black;
 }
 
-.button.correct {
+#second-slide .popup-content.close.correct {
   --hue: var(--hue-correct);
   color: black;
 }
