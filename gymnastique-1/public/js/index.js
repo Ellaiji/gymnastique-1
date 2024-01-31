@@ -24,6 +24,8 @@ swiper.on("slideChange", function () {
   }
 });
 
+moveCubeOnTouch();
+
 // Wait for the content to preload and display 1st slide
 // Here we simulate a loading time of one second
 setTimeout(() => { 
@@ -39,3 +41,4 @@ setTimeout(() => {
   // Init first slide
   initSlideIntro();
 }, 1000);
+

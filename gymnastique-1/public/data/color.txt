@@ -1,0 +1,11 @@
+/* CSS HEX */
+--shark: #262628;
+--pearl-bush: #dfd6c5;
+--fuzzy-wuzzy brown: #c75b46;
+--san-marino: #3c6b9a;
+--my-pink: #d2968e;
+--coral-tree: #a77965;
+--gunsmoke: #878b8b;
+--horizon: #5984a4;
+--storm-gray: #686c84;
+
