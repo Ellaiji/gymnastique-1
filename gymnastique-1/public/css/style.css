@@ -10,7 +10,7 @@
 
 body {
   background-color: black;
-  color: white;
+  color: rgb(0, 0, 0);
   overflow: hidden; /* to avoid slider bugs on some browsers */
   font-family: sans-serif;
 }
@@ -51,10 +51,18 @@ body {
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section,
 #loader {
-  background-color: white;
+  background-color: rgb(229, 165, 28);
   width: 100%;
   height: 100%;
 }
+#loader-img{
+    color: #000;
+}
+#loader-text{
+    color: #000;
+}
+
+
 
 /* Most of the elements in this demo are absolute positioned with percentages */
 #second-slide header,
@@ -108,7 +116,11 @@ main > section {
   height: 80%;
   top: 10%;
   left: 10%;
-  background-color: rgb(255, 177, 68);
+  background-image: url("../img/pop-52_bckgd.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  /* background-color: rgb(255, 177, 68); */
   z-index: 3;
   overflow: hidden;
   border-radius: 20px;
@@ -123,10 +135,10 @@ main > section {
 }
 
 #second-slide .popup-content {
-  background-color: rgb(255, 177, 68);
+  /*background-color: rgb(255, 177, 68);*/
   width: 100%;
   height: 80%;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,6 +170,111 @@ main > section {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/*TELEPHONE OBJET -------------------------------------------------------*/
+#telephone-content h2{
+    top: 5%;
+    font-size: 40%;
+    position: fixed;
+}
+#telephone-content .impact_title {
+    top: 10%;
+    font-size: 60%;
+    color: #386f9c;
+    position: fixed;
+} 
+#phone_video{
+  display: grid;
+  grid-template-columns: 1% 98% 1%;
+  grid-template-rows: 1% 198% 1%;
+  top: 6%;
+  position: relative;
+    
+}
+
+#telephone-content svg{
+  top: -11%;
+  /* left: -15%; */
+  rotate: 75deg;
+  scale: 1.05;
+  overflow: hidden;
+  pointer-events: none;
+  grid-area: 2 / 2 / 2 / 2;
+  position: relative;
+  z-index: 1;
+}
+
+#telephone-content #nemour-quiz-video{
+  top: 3.5%;
+  height: 21.5%;
+  width: 76%;
+  left: 15%;
+  z-index: 0;
+  grid-area: 2 / 2 / 2 / 2;
+  position: relative;
+  pointer-events: none;
+}
+
+#video_quizz{
+    top: 52.5%;
+    position: fixed;
+}
+#video_quizz #question{
+    font-size: 30%;
+    font-weight: 700;
+    padding-bottom: 1%;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+    --noir: #212425;
+    --blanc: #e5dfca;
+    --rouge: #d85f45;
+    --bleu: #386f9c;
+    --rose: #de9b94;
+    --vert: #677f63;
+  }
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    margin: 8px 10px;
+  } 
+.btn_quiz {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    text-align: left;
+    font-size: 20.5%;
+    color: white;
+    outline: none;
+  }
+  
+  .btn_quiz:hover {
+    border-color: black;
+  }
+  
+  .btn_quiz.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn_quiz.wrong {
+    --hue: var(--hue-wrong);
+  }
 
 /* ---------- Positioning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
@@ -260,4 +377,5 @@ body {
   body {
     font-size: 15vw;
   }
+
 }

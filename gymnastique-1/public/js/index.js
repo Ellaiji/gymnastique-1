@@ -30,12 +30,30 @@ setTimeout(() => {
   // fade out the loader "slide"
   // and send it to the back (z-index = -1)
   anime({
-    delay: 1000,
+    delay: 200,
     targets: '#loader',
     opacity: '0',
     'z-index' : -1,
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
-}, 1000);
+  //initSlide1();
+}, 200);
+
+function boingOnClick(element){
+  anime({
+    targets: element,
+    scale: 1.2,
+    easing: "easeInOutQuad",
+    duration: 200,
+    loop: false,
+  });
+  setTimeout(function () {
+    anime({
+      targets: element,
+      scale: 1,
+      easing: "easeInOutQuad",
+      duration: 200,
+      loop: false
+  })}, 200 ); 
+}
