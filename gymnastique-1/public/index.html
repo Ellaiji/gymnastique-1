@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
@@ -22,6 +23,8 @@
         <div id="loader-img" class="ld ld-ring ld-cycle"></div>
         <p id="loader-text">Veuillez patienter...</p>
       </section>
+
+
       <div id="mySwiper" class="swiper">
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
         <main class = "swiper-wrapper">
@@ -30,12 +33,14 @@
               <p></p>
             </footer>
             </section>
+
+
             <section id="second-slide" class="swiper-slide">
                 <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab">
                 <div id="popup" class="popup">
                   <div class="popup-content">
                     <h2 id="title-obj"></h2>
-                    <img src="img/logo_hyblab.png" id="logo-obj" alt="logo obj">
+                    <img src="" id="img-obj" alt="img obj">
                     <p id="text-obj"></p>
                   <button class="Retour" id="close">Retour</button>
                   </div>
@@ -45,6 +50,9 @@
                   <p></p>
                 </footer>
             </section>
+
+
+            
             <section id="third-slide" class="swiper-slide">
                 <header>
                   <h1>This was...</h1>

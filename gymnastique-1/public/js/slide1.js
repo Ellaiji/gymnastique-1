@@ -1,56 +1,48 @@
 "use strict";
 
-// async init function (because of the awaits on fetches)
-const initSlide2 = async function () {
-  // Get logo element
-  const logo = document.querySelector("#logo-hyblab");
+const showPopup = () => {
+  const popup = document.getElementById("popup");
+  popup.style.display = "block";
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 20);
+};
 
-  // (Re)set initial scale of logo
-  logo.setAttribute("style", "transform :scale(1);");
+const closePopup = () => {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show");
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 20);
+};
 
-  // Animate hyblab logo and make shrink on click
-  anime({
-    targets: "#logo-hyblab",
-    scale: 1.2,
-    easing: "easeInOutQuad",
-    direction: "alternate",
-    loop: true,
-  });
+const clickOutsidePopup = (event) => {
+  const popup = document.getElementById("popup");
+  if (!popup.contains(event.target) && popup.classList.contains("show")) {
+    closePopup();
+  }
+};
 
-  document.getElementById("logo-hyblab").addEventListener("click", function () {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-    setTimeout(function () {
-      popup.classList.add("show");
-    }, 20);
+const initSlide2 = async () => {
+  document.getElementById("logo-hyblab").addEventListener("click", showPopup);
 
-  });
-  let response = await fetch('api/topic');
-  const data1 = await response.json();
-  response = await fetch('data/obj.json');
-  const data2 = await response.json();
-  const title = document.querySelector("#title-obj");
-  const text = document.querySelector("#text-obj");
-  title.textContent = `${data2.title}`;
-  text.textContent = `${data2.text}`;
+  try {
+    const response = await fetch("data/obj.json");
+    const data = await response.json();
 
-  document.querySelector("#close").addEventListener("click", function () {
-    var popup = document.getElementById("popup");
-    popup.classList.remove("show");
-    setTimeout(function () {
-      popup.style.display = "none";
-    }, 300);
-  });
+    const title = document.querySelector("#title-obj");
+    const text = document.querySelector("#text-obj");
+    const img = document.querySelector("#img-obj");
 
-    document.addEventListener('click', function clickOutsidePopUp(event) {
-      var popup = document.getElementById("popup");
-      if (  (!popup.contains(event.target)) && (popup.classList.contains("show"))   ) {
-        popup.classList.remove("show");
-        setTimeout(function () {
-          popup.style.display = "none";
-        }, 300);
-      }
-    });
+    title.textContent = data.title || " PAS DE TITRE ";
+    text.textContent = data.text || " PAS DE TEXTE ";
+    
+    img.setAttribute("src", data.picture);
 
+  } catch (error) {
+    console.error("ERREUR JSON :", error);
+  }
 
+  document.querySelector("#close").addEventListener("click", closePopup);
+  document.addEventListener("click", clickOutsidePopup);
 };
