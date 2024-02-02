@@ -101,24 +101,6 @@ main > section {
 }
 
 
-#second-slide .popup-content .close {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 100%, 50%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
-  outline: none;
-}
-
-#second-slide .popup-content.close:hover {
-  border-color: black;
-}
-
-#second-slide .popup-content.close.correct {
-  --hue: var(--hue-correct);
-  color: black;
-}
 
 /* popup div on the second slide class popup */
 #second-slide .popup {
@@ -151,12 +133,12 @@ main > section {
   flex-direction: column;
   align-items: center;
   position: relative;
-  text-align: center;
+  font-family: "Roboto";
 }
 
 #second-slide .popup-content h2 {
-  font-family: "Roboto";
-  font-size: 1em;
+  font-size: clamp(18px,1em,55px);
+
   word-wrap: break-word;
   max-width: 100%;
   line-height: 1em;
@@ -171,18 +153,17 @@ main > section {
   width: 20%;
   right: 0;
   top: 0;
+  margin:5%;
 }
 
 #second-slide .popup-content p {
-  font-family: "Roboto";
-  font-size: 0.35em;
   word-wrap: break-word;
   max-width: 100%;
   line-height: 1.2em;
-  text-align: justify;
   margin-left: 0.7em;
   margin-right: 0.7em;
   position: relative;
+  font-size: clamp(10%,0.7em,30%);
 }
 
 
@@ -296,6 +277,13 @@ body {
     height: calc(
       100 * 16vw / 9
     ); /* adjust height so that aspect ratio is 9/16 */
+    body {
+      font-size:15vw;
+    }
+    #second-slide h2 {
+      font-size: 0.6em;
+    }
+   
   }
 
   /* We set a default font size here. It will be the base for all other font sizes */
