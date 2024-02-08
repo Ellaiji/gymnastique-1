@@ -45,7 +45,7 @@ function boingOnClick(element){
     targets: element,
     scale: 1.2,
     easing: "easeInOutQuad",
-    duration: 200,
+    duration: 160,
     loop: false,
   });
   setTimeout(function () {
@@ -53,7 +53,7 @@ function boingOnClick(element){
       targets: element,
       scale: 1,
       easing: "easeInOutQuad",
-      duration: 200,
+      duration: 160,
       loop: false
-  })}, 200 ); 
+  })}, 160 ); 
 }

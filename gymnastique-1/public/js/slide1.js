@@ -33,26 +33,7 @@ const initSlide2 = async function () {
     }, 300);
   });
   // Jeu Télephone vidéo quizz
-  //YT video player:
-  /*
-  let yt_iframe=document.getElementById("nemour-quiz-video");
-  player = new YT.Player( yt_iframe, {
-    events: {
-      'onStateChange': function(event){
-        onYouTubePlayerStateChange(event, iframe_id);
-      }
-    }
-  });
-  yt_iframe.addEventListener("onStateChange",(evt)=>{console.log("please");})
-  //repload the video when onStateChange=YT.PlayerState.ENDED)
-  function onStateChange(state) {
-    if (state.data === YT.PlayerState.ENDED) {
-      player.loadVideoById({
-        videoId: videoId,
-        end: 7
-      });
-    }
-  }*/
+  
   const buttons = document.getElementsByClassName("btn_quiz")
   for(var i=0; i<buttons.length; i++){
     var button=buttons[i];
@@ -63,6 +44,20 @@ const initSlide2 = async function () {
     boingOnClick(selectedButton);
     if (selectedButton.id=="answer"){
       selectedButton.classList.add('correct');
+      setTimeout(()=>{
+        anime({target:"#explication_quizz",display: "block",easing: "easeIn", duration: 200});
+        var phone_popup = document.getElementById("telephone_popup");
+        phone_popup.classList.remove("show");
+        setTimeout(function () {
+          phone_popup.style.display = "none";
+        }, 300);
+        var answer_popup = document.getElementById("quizz_end_popup");
+        answer_popup.style.display = "block";
+        setTimeout(function () {
+          answer_popup.classList.add("show");
+        }, 20);
+      },100)
+        //
       //console.log("DING ! Bonne réponse !!!");
     }
     else{
